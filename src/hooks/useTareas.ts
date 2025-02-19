@@ -12,6 +12,7 @@ export const useTarea = () => {
         localStorage.setItem('tareas', JSON.stringify(tareas))
     }, [tareas])
 
+    
     const filteredTareas = tareas.filter(t => {
         if (filter === 'completas') return t.completada
         if (filter === 'incompletas') return !t.completada
