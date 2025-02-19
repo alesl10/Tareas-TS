@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet"');
+
+@import "tailwindcss";
+@import "tailwindcss-animated";
+
+:root {
+  font-family: "Merienda", serif;
+  font-weight: normal;
+  font-optical-sizing: auto;
+}
+
+.inputColor {
+  width: 50%;
+  height: 125%;
+  padding: 0px;
+  border: none;
+  border-radius: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  position: absolute;
+  right: -1.5%;
+  top: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: width 0.3s ease-in-out, clip-path 0.3s ease-in-out;
+  clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.inputColor:is(:focus, :hover) {
+  border: none;
+  width: 100%;
+  clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0 100%);
+}
